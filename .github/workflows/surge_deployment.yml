@@ -29,6 +29,7 @@ jobs:
         uses: actions/setup-node@v2-beta
         with: 
           node-version: 12
+          
       - uses: borales/actions-yarn@v2.0.0
         with: 
           cmd: install
@@ -40,4 +41,4 @@ jobs:
         run: npm install --global surge
         
       - name: Deploy to Surge
-        run: surge ./build reactbaseapp-rao.surge.sh ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build reactbaseproject-rao.surge.sh ${{ secrets.SURGE_TOKEN }}
